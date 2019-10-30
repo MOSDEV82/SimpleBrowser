@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
              */
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                urlEditText.setText(view.getUrl());
                 return super.shouldOverrideUrlLoading(view, request);
             }
 
@@ -69,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         this.backImageButton.setOnClickListener(view -> {
             if (this.webView.canGoBack())
                 this.webView.goBack();
-
         });
 
         this.forwardImageButton.setOnClickListener(view -> {
